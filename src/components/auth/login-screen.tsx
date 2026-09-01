@@ -3,13 +3,13 @@ import { DfetMark } from "@/components/brand/logo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { GROK_PROVIDERS, authClient, authEnabled, signIn } from "@/lib/auth/client";
-import { DEMO_LOGIN, DEMO_PASSWORD, normalizeLogin } from "@/lib/demo-login";
+import { normalizeLogin } from "@/lib/demo-login";
 
 export function LoginScreen() {
   const [mode, setMode] = useState<"in" | "up">("in");
   const [name, setName] = useState("");
-  const [email, setEmail] = useState(DEMO_LOGIN);
-  const [password, setPassword] = useState(DEMO_PASSWORD);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [busy, setBusy] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -73,11 +73,7 @@ export function LoginScreen() {
         <div className="w-full max-w-sm">
           <p className="text-[11px] font-semibold tracking-[0.16em] text-teal uppercase">Sign in</p>
           <h2 className="mt-1 font-display text-3xl text-ink">Welcome back</h2>
-          <p className="mt-2 text-sm text-mist">
-            Super Admin is <span className="font-medium text-ink">{DEMO_LOGIN}</span> /{" "}
-            <span className="font-medium text-ink">{DEMO_PASSWORD}</span>. Change this later when DFET picks a
-            real account.
-          </p>
+          <p className="mt-2 text-sm text-mist">Use your DFET staff email and password.</p>
 
           {authEnabled ? (
             <div className="mt-8 grid gap-2">
