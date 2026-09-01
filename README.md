@@ -4,12 +4,6 @@ Internal **IT Asset & Staff Task Management System** for DFET.
 
 Staff sign in, get assigned work, file daily reports, and track company kits (laptops, routers, Starlink, phones) from one desk.
 
-## Sign in (demo Super Admin)
-
-- **Username:** `admin`
-- **Password:** `admin`
-
-(`admin@dfet.ng` also works.) Change these before real company use.
 
 ## What’s in the app
 
